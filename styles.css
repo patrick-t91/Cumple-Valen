@@ -1,0 +1,97 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+}
+
+.container {
+    text-align: center;
+    padding-top: 100px;
+    color: #fff;
+    background-color: #448EE4;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#greeting {
+    color: #FF69B4;
+    background: rgba(255, 182, 193, 0.7);
+    font-size: 32px;
+    animation: bounce 2s infinite;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#heart {
+    animation: heartBeat 2s infinite;
+    transform-origin: center;
+}
+
+.message-container {
+    background-color: rgba(255, 182, 193, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.message {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+    font-style: italic;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
